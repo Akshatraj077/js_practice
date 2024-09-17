@@ -76,3 +76,28 @@ console.log(Object.values(obj6));
 
 console.log(obj2.hasOwnProperty('1'));
 console.log(obj2.hasOwnProperty('9'));
+
+const course = {
+    cn: "js",
+    cp: "999",
+    ci: "akshat"
+}
+
+const {ci} = course
+console.log(ci);
+
+const {ci: instructor} = course
+console.log(instructor);
+
+//Json ->
+// {
+//     "name": "akshat",
+//     "id": "123",
+//     "subject": "js"
+// }
+// objects in array ->
+// [
+//     {},
+//     {},
+//     {}
+// ]
