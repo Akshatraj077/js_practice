@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-color{
+            background-color: #212121;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-color">
+    <div>
+        <h1 id="title" class="heading">DOM learning with akshat <span style="display: none;">test text</span></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</body>
+</html>
+
+document.getElementById("title")
+<h1 id=​"title" class=​"heading">​DOM learning with akshat​</h1>​
+
+document.getElementById("title").id
+'title'
+
+document.getElementById("title").className
+'heading'
+
+document.getElementById("title").getAttribute("class")
+'heading'
+
+document.getElementById("title").setAttribute("class","testing")
+
+
+title.style.backgroundColor="green"
+'green'
+
+title.style.padding = "16px"
+'16px'
+
+title.style.borderRadius="20px"
+'20px'
+
+title.textContent
+'DOM learning with akshat test text'
+
+title.innerText
+'DOM learning with akshat'
+
+title.innerHTML
+'DOM learning with akshat <span style="display: none;">test text</span>'
+
+document.querySelector("#title")
+<h1 id=​"title" class=​"heading">​…​</h1>​
+
+document.querySelector("ul")
+<ul>​…​</ul>​
+
+const myul = document.querySelector("ul")
+
+
+myul.querySelector("li").style.backgroundColor="green"
+'green'
+
+myul.style.backgroundColor="green"
+'green'
+
+myul.querySelector("li").innerText = "five"
+'five'
+
+//difference between innerText and textContent is that innerHTML only provides the rendered content on website while textContent shows the total text that a tag contains irrespective of its displaying nature.
+//also the innerHTML provides the whole HTML written under a particular tag
