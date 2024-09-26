@@ -70,5 +70,20 @@ myul.style.backgroundColor="green"
 myul.querySelector("li").innerText = "five"
 'five'
 
+document.getElementsByClassName("list-item")
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item] // this will provide HTMLcollection and not an array
+
+const myitem = document.getElementsByClassName("list-item")
+
+Array.from(myitem)
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+const myconvertedarr = Array.from(myitem)
+                                         //to convert it to array
+
+const hold = document.querySelectorAll("li")
+
+hold[1].innerText
+'two'
+
 //difference between innerText and textContent is that innerHTML only provides the rendered content on website while textContent shows the total text that a tag contains irrespective of its displaying nature.
 //also the innerHTML provides the whole HTML written under a particular tag
