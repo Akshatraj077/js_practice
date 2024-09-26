@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="language">
+        <li>Akshat</li>
+        <li>Archita</li>
+        <li>Kalighat</li>
+    </ul>
+</body>
+<script>
+    function addlang(lname){
+        const li = document.createElement("li")
+        li.innerHTML = `${lname}`
+        document.querySelector(".language").appendChild(li)
+    }
+    addlang("saraswati puja")
+    addlang("14th Feb")
+
+    function addOptilang(lname){
+        const li = document.createElement("li")
+        li.appendChild(document.createTextNode(lname))
+        document.querySelector(".language").appendChild(li)
+    }
+    addOptilang("white kurta")
+    addOptilang("grayish violet saree and red blouse")
+
+    //Edit
+    const edit = document.querySelector("li:nth-child(2)")
+    const newli = document.createElement("li")
+    newli.textContent = "Archita raj"
+    edit.replaceWith(newli)
+
+    //Edit
+    const edit1 = document.querySelector("li:first-child")
+    edit1.outerHTML = "<li>Akshat raj</li>"
+</script>
+</html>
