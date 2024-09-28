@@ -1,4 +1,4 @@
-"use strict" //treat all JS codes as newer version
+"use strict" //treat all JS codes as newer version. default js works on strict mode only but it can be written for a good syntax eg.
 
 //alert(3+3) //will work in browser but not here
 
@@ -9,7 +9,7 @@ let state = null
 //number -> 2 to power 53
 //bigint
 //null = standalone value
-//undefined
+//undefined = value not assigned yet
 //symbol -> unique
 //object
 
@@ -17,9 +17,10 @@ console.log(typeof age);
 console.log(typeof null);
 console.log(typeof undefined);
 
-// primituve types: string,null,undefined,number,BigInt,symbol,Boolean
 
-// reference(non-primitve): arrays,functions,objects
+// Call by value(primitive types): string,null,undefined,number,BigInt,symbol,Boolean
+
+// Call by reference(non-primitve): arrays,functions,objects
 
 const id = Symbol('123')
 const anotherid = Symbol('123')
@@ -45,3 +46,8 @@ console.log(myobj);
 console.log(myobj.name);
 
 
+const myfunc = function(){
+    console.log("hello world");
+}
+myfunc()
+console.log(typeof(myfunc()));

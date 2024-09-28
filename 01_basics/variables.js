@@ -4,7 +4,7 @@ var acc_pass = "12345"
 acc_city = "kolkata"
 let acc_state
 
-// acc_id = 2
+// acc_id = 2 //not allowed as const
 acc_mail = "archita@gmail.com"
 acc_pass = "2121"
 acc_city = "bengaluru"
