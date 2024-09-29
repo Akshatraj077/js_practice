@@ -9,7 +9,7 @@ user.msg()
 user.username = "archita"
 user.msg()
 
-console.log(this);
+console.log(this); //this will return window if run on website as window is the default current global scope
 
 function check() {
     console.log(this);

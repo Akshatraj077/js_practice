@@ -22,8 +22,8 @@ console.log(result);
 
 function loginmsg(username){
     if(username === undefined){  //if(!username)
-        console.log("Please enter a username");
-        return
+        //console.log("Please enter a username");
+        return "Please enter a username"
     }
     return `Hello there!! ${username}`
 }
@@ -68,7 +68,7 @@ function add1(num){
     return num + 1
 }
 
-const add2 =  function(num){
+const add2 =  function(num){ //this is also called as expressions
     return num + 1
 }
 console.log(add2(5));

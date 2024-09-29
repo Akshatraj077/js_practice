@@ -10,7 +10,7 @@ const user = {
     location: "auckland",
     ispresent: false,
     "full name": "akshat raj",
-    [sim]: "key1",
+    [sim]: "key1", //symbol is written like this only
     2: 23
 }
 console.log(user.location);
@@ -58,6 +58,8 @@ const use1 = {
     }
 }
 console.log(use1.fullname?.firstn);
+console.log(use1["fullname"]["firstn"]);
+
 
 const obj1 = {1:"a", 2:"b", 3:"c"}
 const obj2 = {1:"d", 2:"e", 3:"f"}
@@ -73,6 +75,7 @@ console.log(obj7);
 
 console.log(Object.keys(obj5));
 console.log(Object.values(obj6));
+console.log(Object.entries(obj5));
 
 console.log(obj2.hasOwnProperty('1'));
 console.log(obj2.hasOwnProperty('9'));
@@ -83,13 +86,13 @@ const course = {
     ci: "akshat"
 }
 
-const {ci} = course
+const {ci} = course //destructuring of object, "{ci}" which value to fetch from object and "course" is from where/which object to be fetched from
 console.log(ci);
 
 const {ci: instructor} = course
 console.log(instructor);
 
-//Json ->
+//Json format ->
 // {
 //     "name": "akshat",
 //     "id": "123",

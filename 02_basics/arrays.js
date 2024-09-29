@@ -40,10 +40,10 @@ mh.push(dc)
 console.log(mh);
 mh.pop()
 
-const ah = mh.concat(dc)
+const ah = mh.concat(dc)//here using concat ypu can only merge 2 arrays
 console.log(ah);
 
-const ah1 = [...mh, ...dc]
+const ah1 = [...mh, ...dc]//but by usig spread operator you can merge as many array in a single LOC
 console.log(ah1);
 
 const num = [1, 2, 3, [5, 6], 7, [8, [9, 3, 5]], 6]
