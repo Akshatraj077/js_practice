@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>js code practice</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    setTimeout(() => {
+        console.log("akshat");
+    }, 2000);
+    setInterval(() => {
+        console.log("akshat");
+    }, 2000);
+
+
+    const changetxt = function(){
+        document.querySelector('h1').innerHTML = "you always win"
+    }
+    setTimeout(changetxt, 2000)
+
+
+    const changeme = function(){
+        document.querySelector('h1').innerHTML = "im thankfull for everything and everyone loves me"
+    }
+    const change = setTimeout(changeme, 4000)
+    document.querySelector('#stop').addEventListener('click', function(e){
+        clearTimeout(change) //this needs reference which timeout to be removed
+    })
+
+</script>
+</html>

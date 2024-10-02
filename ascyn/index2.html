@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>js code practice</h1>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+</body>
+<script>
+    let intervalId; // This will hold the interval ID
+    let i = 0;
+
+    document.querySelector('#start').addEventListener('click', function(e) {
+        if (!intervalId) { // To prevent multiple intervals
+            intervalId = setInterval(() => {
+                i++;
+                document.querySelector('h1').innerHTML = `The heading is changed ${i} times`;
+            }, 2000);
+        }
+    });
+
+    document.querySelector('#stop').addEventListener('click', function(e) {
+        clearInterval(intervalId); // Use clearInterval to stop the interval
+        intervalId = null; // Reset intervalId to allow restarting
+    });
+
+</script>
+</html>
