@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <div>
+        <h2>Amazing images</h2>
+        <ul id="images">
+            <li><img width="200px" height="200px" id="photo" src="https://pixabay.com/photos/house-home-thatched-roof-grass-76929/" alt=""></li>
+            <li><img width="200px" height="200px" id="japan" src="https://pixabay.com/photos/lips-seduction-elicit-entice-mouth-839236/" alt=""></li>
+            <li><img width="200px" height="200px" id="owl" src="https://pixabay.com/photos/canyon-night-stars-outdoors-2178786/" alt=""></li>
+            <li><img width="200px" height="200px" id="prayer" src="https://pixabay.com/photos/differences-contrast-different-wire-4833257/" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://www.google.com/" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    document.getElementById('owl').onclick = function(){
+        alert('Owl clicked')
+    } //not much problem in this approach but it gives less propogation features 
+
+    //reead about -> type, timestamp, defaultprevented, target, currenttarget, srcelement, toelement, clientx, clienty, screenx, screeny, altkey, cntrlkey, shiftkey, keycode
+
+    document.querySelector("#photo").addEventListener('click', function(e){
+        alert('photo clicked')
+    }, false) //false is a default value if you dont specify it.
+
+    //false gives bubbling propogation (down to up) while true gives capturing propogation (up to down)
+
+    document.querySelector("#images").addEventListener('click', function(e){
+        alert('inside ul clicked')
+    }, true)
+
+    document.querySelector("#japan").addEventListener('click', function(e){
+        alert('japan clicked')
+        e.stopPropagation(); // this stops both the propogation 
+    }, true)
+
+    document.querySelector("#google").addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+    }, true)
+
+    document.querySelector("#images").addEventListener('click', function(e){
+        if(e.target.tagName === 'IMG'){
+            let removeit = e.target.parentNode;
+            removeit.remove();
+        }
+    }, false)
+</script>
+</html>
